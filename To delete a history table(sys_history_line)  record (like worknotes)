@@ -1,0 +1,6 @@
+var gr = new GlideRecord('sys_history_line');
+gr.addQuery('sys_id','e5ee4f71533d0210fa7958e0a0490e64' );
+gr.query();
+if (gr.next()){
+	gr.deleteRecord ();
+}
