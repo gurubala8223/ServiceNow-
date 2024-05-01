@@ -1,0 +1,8 @@
+var gr = new GlideRecord ('incident') ;
+gr.orderByDesc('sys_created_on');
+gr.setLimit(5);
+gr.query();
+
+while (gr.next()){
+	gs.info("Incident:" + gr.number + ", Description :" + gr.short_description );
+}
