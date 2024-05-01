@@ -1,2 +1,2 @@
-Some scripts with help on working with ServiceNow .
+Some scripts which will help to work with ServiceNow.
 
