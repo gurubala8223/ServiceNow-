@@ -1,28 +1,37 @@
-ServiceNow provides a comprehensive set of REST APIs that allow developers to interact with the platform programmatically. These APIs enable you to perform various operations such as creating, reading, updating, and deleting records, executing scripted actions, managing attachments, and more. Here's an overview of some key aspects of the ServiceNow REST API:
+ServiceNow provides a comprehensive set of REST APIs that allow developers to interact with the platform programmatically.
+These APIs enable you to perform various operations such as creating, reading, updating, and deleting records, executing scripted actions, managing attachments, and more. 
+Here's an overview of some key aspects of the ServiceNow REST API:
 
 Authentication: 
-ServiceNow supports multiple authentication methods for REST API access, including basic authentication, OAuth, and API keys. OAuth is often recommended for production use due to its security benefits.
+ServiceNow supports multiple authentication methods for REST API access, including basic authentication, OAuth, and API keys.
+OAuth is often recommended for production use due to its security benefits.
 
 Endpoints:
-ServiceNow REST APIs have different endpoints for different functionalities, such as table API for CRUD operations on records, Scripted REST APIs for custom actions and integrations, and Attachment API for managing attachments.
+ServiceNow REST APIs have different endpoints for different functionalities, such as table API for CRUD operations on records, 
+Scripted REST APIs for custom actions and integrations, and Attachment API for managing attachments.
 
 Resources:
-The primary resource in ServiceNow REST API is a table, which corresponds to a ServiceNow database table. You can access records in these tables using REST API endpoints.
+The primary resource in ServiceNow REST API is a table, which corresponds to a ServiceNow database table. 
+You can access records in these tables using REST API endpoints.
 
 Methods:
 REST API endpoints support HTTP methods such as GET, POST, PUT, PATCH, and DELETE for performing various operations on resources.
 
 Querying:
-You can use query parameters to filter, sort, and paginate results when querying records using the REST API. ServiceNow supports a SQL-like query syntax for filtering records based on conditions.
+You can use query parameters to filter, sort, and paginate results when querying records using the REST API.
+ServiceNow supports a SQL-like query syntax for filtering records based on conditions.
 
 Response Formats:
-ServiceNow REST APIs support both JSON and XML response formats. JSON is typically the preferred format due to its simplicity and widespread usage.
+ServiceNow REST APIs support both JSON and XML response formats.
+JSON is typically the preferred format due to its simplicity and widespread usage.
 
 Error Handling:
-Errors in ServiceNow REST API requests are returned with appropriate HTTP status codes along with error messages in the response body. Detailed error information helps developers troubleshoot issues effectively.
+Errors in ServiceNow REST API requests are returned with appropriate HTTP status codes along with error messages in the response body. 
+Detailed error information helps developers troubleshoot issues effectively.
 
 Rate Limiting:
-ServiceNow imposes rate limits on REST API requests to prevent abuse and ensure fair usage. Developers should be aware of these limits and design their applications accordingly.
+ServiceNow imposes rate limits on REST API requests to prevent abuse and ensure fair usage.
+Developers should be aware of these limits and design their applications accordingly.
 
 Security:
 ServiceNow REST APIs support HTTPS encryption to ensure data security during transit. Additionally, proper authentication and authorization mechanisms should be implemented to restrict access to sensitive resources.
