@@ -1,0 +1,12 @@
+(function executeRule(current, previous /*null when async*/) {
+
+	var temp = new GlideRecord("u_incident_temp");
+	temp.addQuery('u_incident_number',current.number);
+	temp.query();
+
+	if (temp.next()){
+		temp.deleteRecord();
+	}
+	
+
+})(current, previous);
