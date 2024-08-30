@@ -1,0 +1,11 @@
+(function executeRule(current, previous /*null when async*/) {
+
+	var temp = new GlideRecord("u_incident_temp");
+	temp.initialize();
+
+	temp.u_incident_number =current.number;
+	temp.u_short_description = current.short_description;
+
+	temp.insert();
+
+})(current, previous);
