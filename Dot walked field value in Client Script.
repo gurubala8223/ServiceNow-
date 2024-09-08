@@ -1,0 +1,8 @@
+How to access dot walked field value in Client Script?
+There are few fields which are not part of current table, they are brought from another reference field table.
+
+e.g. In below example, highlighted field is Caller Email which is brought from Caller reference that is from USER table.
+
+
+So, to access value from such field, we can use below syntax in client script:
+g_form.getValue("caller_id.email");
