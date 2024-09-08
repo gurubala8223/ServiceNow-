@@ -1,0 +1,7 @@
+var gaInc = new GlideAggregate("incident");
+gaInc.addAggregate("COUNT");
+gaInc.query();
+
+if(gaInc.next()){
+    gs.info(gaInc.getAggregate("COUNT"));
+}
