@@ -1,0 +1,6 @@
+var grInc= new GlideRecord("incident");
+grInc.addQuery("state",3);
+grInc.query();
+while(grInc.next()){
+	gs.print(grInc.number);
+}
