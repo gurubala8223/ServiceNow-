@@ -1,0 +1,5 @@
+var gr = new GlideRecord('sys_user');
+gr.get('sys_id', 'fcb15895c3461210874678cc050131b2');
+gr.email = 'putchakayala@example.com'; // Replace with the new email
+gr.update();
+gs.print('Email updated successfully.');
