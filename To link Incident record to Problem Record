@@ -1,0 +1,8 @@
+var gr= new GlideRecord("incident");
+gr.addQuery("number","INC0000017");
+gr.addNullQuery("problem_id");
+gr.query();
+while(gr.next()){
+	gr.problem_id = "a9e4890bc6112276003d7a5a5c774a74"
+	gr.update();
+}
