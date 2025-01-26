@@ -1,0 +1,8 @@
+var gr = new GlideRecord("sc_req_item");
+gr.addEncodedQuery("assigned_to=NULL^state=-5");
+gr.query();
+while (gr.next()){
+	gr.setValue("state","7");
+	gs.info("RITM is closed by Scheduled Job , as it was assigned to is empty: " + gr.number);
+	gr.update();
+}
