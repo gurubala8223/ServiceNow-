@@ -1,0 +1,8 @@
+var gr = new GlideRecord('incident');
+gr.addQuery('sys_created_on', '>=', gs.beginningOfToday());
+gr.addQuery('sys_created_on', '<=', gs.endOfToday()); 
+gr.query();
+
+while (gr.next()) {
+    gs.info('Incident Number: ' + gr.number );
+}
