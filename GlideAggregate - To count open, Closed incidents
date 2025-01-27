@@ -1,0 +1,18 @@
+var gr =new GlideAggregate("incident");
+gr.addAggregate("COUNT","state");
+gr.addQuery("state","IN", "1,7");
+gr.groupBy('state');
+gr.query();
+
+var openCount = 0;
+var closedCount = 0;
+
+while (gr.next()) {{
+    if (gr.state == 1) 
+        openCount = gr.getAggregate('COUNT', 'state');
+ 	else if (gr.state == 7) 
+        closedCount = gr.getAggregate('COUNT', 'state');
+	}
+gs.info('Open incidents: ' + openCount);
+gs.info('Closed incidents: ' + closedCount);
+}
