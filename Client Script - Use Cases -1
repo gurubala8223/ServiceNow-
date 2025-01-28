@@ -1,0 +1,22 @@
+SCENARIO 1: onLoad Client Script :
+Description: Write an onLoad Client Script that checks the user's role, and if the user is an "Admin", 
+it sets the value of the "priority" field to "1 - Critical" when the form is loaded.
+
+function onLoad() {
+   var userRole= g_user.hasRole("admin");
+   if (userRole){
+	g_form.setValue("priority","1");
+   }   
+}
+
+SCENARIO 2: onChange Client Script :
+Description: Write an onChange Client Script for the "category" field. 
+If the category is "Hardware", make the "sub_category" field visible; otherwise, hide it.
+
+function onChange(control, oldValue, newValue) {
+    if (newValue == 'Hardware') {
+        g_form.setVisible('sub_category', true);  // Show sub_category field
+    } else {
+        g_form.setVisible('sub_category', false);  // Hide sub_category field
+    }
+}
