@@ -1,0 +1,18 @@
+1)initialize(): Creates an empty record suitable for population before an insert.
+2)newRecord(); Creates a GlideRecord, set the default values for the fields and assign a unique id to the record.
+Try these two in scripts background and you'll see that initialize gives no value to opened_at, whereas newRecord does.
+
+ 
+
+var inc = new GlideRecord('incident');
+inc.initialize();
+gs.print(inc.opened_at.getDisplayValue());
+OUTPUT : *** Script: 
+ 
+
+var inc = new GlideRecord('incident');
+inc.newRecord();
+gs.print(inc.opened_at.getDisplayValue());
+OUTPUT : *** Script: 28/01/2025 12:04:16
+
+
