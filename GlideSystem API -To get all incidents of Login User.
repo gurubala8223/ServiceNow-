@@ -1,0 +1,6 @@
+var gr= new GlideRecord("incident");
+gr.addQuery("caller_id",gs.getUserID());
+gr.query();
+while(gr.next()){
+	gs.info("Incidents:"+ gr.number);
+}
