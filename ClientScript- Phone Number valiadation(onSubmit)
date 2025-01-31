@@ -1,0 +1,8 @@
+var phone = g_form.getValue("u_phone_numer");
+var pattern = /((\+*)((0[-]*)*|((91 )*))((\d{12})+|(\d{10})+))|\d{5}([- ]*)\d{6}/; //Regax Expression.
+if (!phone.match(pattern)) {
+    g_form.addErrorMessage("Enter Correct Phone NUmber");
+    return false;
+}
+return true;
+}
