@@ -1,0 +1,12 @@
+g_form.addDecoration('caller_id', 'icon-star', 'STAR In Red',"color-red");
+g_form.addErrorMessage('This is an error');
+g_form.addInfoMessage("This is an Info");
+g_form.addFormMessage('info message','info');
+g_form.addOption('priority', '6', '6 - Really Low'); 
+#addOption(String fieldName, String choiceValue, String choiceLabel)
+Adds a choice to the end of a choice list field.
+g_form.disableAttachments();
+g_form.enableAttachments();
+
+
+
