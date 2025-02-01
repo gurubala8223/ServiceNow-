@@ -30,3 +30,13 @@ function onLoad() {
         g_form.setReadOnly('description', true);
     }
 }
+
+SCENARIO 4: onLoad Client Script :
+Description: Auto Populate Current login user as caller in caller_id field.
+function onLoad() {
+    var currentuser = g_user.userID;
+    if (g_form.isNewRecord()) {
+        g_form.setValue("caller_id", currentuser);
+    }
+}
+
