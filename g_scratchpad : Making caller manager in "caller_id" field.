@@ -1,0 +1,17 @@
+OnDispaly Business Rule :
+(function executeRule(current, previous /*null when async*/) {
+  var user = gs.getUser();
+	var userRecord = new GlideRecord('sys_user');
+	if (userRecord.get(user.getID()) && userRecord.manager) {
+        g_scratchpad.manager_id = userRecord.manager;
+	}
+})(current, previous);
+
+
+
+onLoad Client Script: 
+function onLoad() {
+    if (g_scratchpad.manager_id) {
+        g_form.setValue('caller_id', g_scratchpad.manager_id);
+    }
+}
