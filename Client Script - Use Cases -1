@@ -20,3 +20,13 @@ function onChange(control, oldValue, newValue) {
         g_form.setVisible('sub_category', false);  // Hide sub_category field
     }
 }
+
+
+SCENARIO 3: onLoad Client Script :
+Description: Make the "Short Description" Field Read-Only After Submission.
+function onLoad() {
+    // Check if the record is NOT new
+    if (!g_form.isNewRecord()) {
+        g_form.setReadOnly('description', true);
+    }
+}
