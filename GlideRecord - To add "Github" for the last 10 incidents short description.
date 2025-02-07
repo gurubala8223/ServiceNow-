@@ -1,0 +1,8 @@
+var inc = new GlideRecord("incident");
+inc.setLimit(10);
+inc.orderByDesc("sys_updated_on");
+inc.query();
+while(inc.next()){
+	inc.short_description = "Github" + inc.short_description
+	inc.update();
+}
