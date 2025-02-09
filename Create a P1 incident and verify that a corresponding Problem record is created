@@ -1,0 +1,19 @@
+var incP1 = new GlideRecord("incident");
+incP1.initialize();
+incP1.priority= 2;
+incP1.short_description= " Go to INDIA"
+incP1.caller_id= "62826bf03710200044e0bfc8bcbe5df1";
+incP1.setValue("state","2");
+var incP1SysId = incP1.insert();
+
+var probP1 = new GlideRecord("problem");
+probP1.addQuery("incident",incP1SysId);
+probP1.query();
+if (probP1.next()){
+	probP1.short_description = incP1SysId.short_description;
+	gs.info("P1 problem Created"+ probP1.number);
+}else{
+	gs.error("P1 problem not created");
+}
+
+
