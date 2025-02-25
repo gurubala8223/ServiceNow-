@@ -1,0 +1,12 @@
+(function executeRule(current, previous /*null when async*/) {
+
+	var type = ["General","Root Cause Analysis"];
+	for(i=0;i<2;i++){
+		var gr = new GlideRecord("problem_task");
+		gr.initialize();
+		gr.problem_task_type = type[i];
+		gr.short_description= "Type of this Task was"+ type[i];
+		gr.problem = current.sys_id;
+		gr.insert();
+	} 
+})(current, previous);
