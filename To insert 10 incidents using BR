@@ -1,0 +1,7 @@
+for (var i = 1; i <= 10; i++) {
+    var gr = new GlideRecord('incident');
+    gr.initialize();
+    gr.autoSysFields(false); // Prevent system fields from being updated
+    gr.short_description = "Test incident #" + i + " without updating system fields";
+    gr.insert();
+}
