@@ -1,0 +1,10 @@
+var ch = new GlideRecord("change_request");
+ch.addEncodedQuery("state=-5");
+ch.query();
+while (ch.next()){
+	ch.state = -2;
+	ch.setWorkflow(false);
+	ch.update();
+}
+
+
