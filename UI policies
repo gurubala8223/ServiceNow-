@@ -4,4 +4,11 @@ UI Policies
 2.Usage of UI policy
 3.Creating UI Policy
 
-By tommorow classess
+UI policy based on role: admin to hide the state field .
+function onCondition() {
+
+    if (g_user.hasRole("admin")) {
+        g_form.setDisplay("state", false);
+		g_form.showFieldMsg("subcategory",'state is not visible');
+    }
+}
