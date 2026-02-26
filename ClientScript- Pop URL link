@@ -1,0 +1,11 @@
+function onChange(control,oldValue, newValue, isLoading, isTemplate){
+  if (isLoading || newValue == ' '){
+      return;
+}
+var state = newValue;
+if (state == 'closed _complete'){
+var url = 'KBA link';
+var link= '<a href = "' + url +'" target ="_blank"> Click here </a>;
+g_form.addInfoMessage("Here is the KBA LINK" + link );
+    }
+}
