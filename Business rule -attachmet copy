@@ -1,0 +1,39 @@
+(function executeRule(current, previous /*null when async*/) {
+
+    try {
+        var gr = new GlideRecord(current.table_name);
+        if (!gr.get(current.table_sys_id))
+            return;
+
+        var targets = [];
+
+        if (gr.parent)
+            targets.push(gr.parent);
+
+        if (gr.u_hr_case)
+            targets.push(gr.u_hr_case);
+
+        if (gr.u_disciplinary_involved_party)
+            targets.push(gr.u_disciplinary_involved_party);
+
+        if (gr.u_appeal_outcome)
+            targets.push(gr.u_appeal_outcome);
+
+        if (gr.u_appeal_case_involved_party)
+            targets.push(gr.u_appeal_case_involved_party);
+
+        // Copy attachment to all targets
+        for (var i = 0; i < targets.length; i++) {
+            GlideSysAttachment.copy(
+                current.table_name,
+                current.table_sys_id,
+                'sn_hr_er_case', // change if needed
+                targets[i]
+            );
+        }
+
+    } catch (e) {
+        gs.error("Attachment Copy Error: " + e.message);
+    }
+
+})(current, previous);
